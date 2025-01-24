@@ -1,0 +1,4 @@
+FROM hashicorp/terraform:1.5.0
+
+ADD . /infrastructure
+WORKDIR /infrastructure

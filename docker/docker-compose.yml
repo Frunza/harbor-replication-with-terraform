@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  mainservice:
+    image: harborreplication
+    network_mode: host
+    working_dir: /infrastructure
+    environment:
+      - TF_HTTP_USERNAME=${TF_HTTP_USERNAME}
+      - TF_HTTP_PASSWORD=${TF_HTTP_PASSWORD}
+      - HARBOR_URL=${HARBOR_URL}
+      - HARBOR_USERNAME=${HARBOR_USERNAME}
+      - HARBOR_PASSWORD=${HARBOR_PASSWORD}
+    entrypoint: ["sh", "-c"]
+    command: ["cd terraform && terraform init && terraform validate && terraform apply -auto-approve"]
