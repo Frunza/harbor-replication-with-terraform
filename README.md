@@ -30,7 +30,7 @@ We want to run everything in a docker container, so let's create the `dockerfile
  ```sh
 FROM hashicorp/terraform:1.5.0
 
-ADD . /infrastructure
+COPY . /infrastructure
 WORKDIR /infrastructure
 ```
 
