@@ -8,11 +8,10 @@ If you have a `Harbor` installation, how to you make sure that everything works 
 
 A Linux or MacOS machine for local development. If you are running Windows, you first need to set up the *Windows Subsystem for Linux (WSL)* environment.
 
-You need `docker cli` and `docker-compose` on your machine for testing purposes, and/or on the machines that run your pipeline.
-You can check both of these by running the following commands:
+You need `docker cli` on your machine for testing purposes, and/or on the machines that run your pipeline.
+You can these by running the following command:
 ```sh
 docker --version
-docker-compose --version
 ```
 
 Set the following environment variable for `Harbor` access:
@@ -34,7 +33,7 @@ COPY . /infrastructure
 WORKDIR /infrastructure
 ```
 
-Let's inject the environment variables and terraform commands in a `docker-compose` file:
+Let's inject the environment variables and terraform commands in a `docker compose` file:
  ```sh
 version: '3.9'
 
@@ -118,5 +117,5 @@ You can create a script to run the code inside a container:
 set -e
 
 docker build -f docker/dockerfile -t harborreplication .
-docker-compose -f docker/docker-compose.yml run --rm mainservice
+docker compose -f docker/docker-compose.yml run --rm mainservice
 ```

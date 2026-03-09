@@ -4,4 +4,4 @@
 set -e
 
 docker build -f docker/dockerfile -t harborreplication .
-docker-compose -f docker/docker-compose.yml run --rm mainservice
+docker compose -f docker/docker-compose.yml run --rm mainservice
