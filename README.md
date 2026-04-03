@@ -9,7 +9,7 @@ If you have a `Harbor` installation, how to you make sure that everything works 
 A Linux or MacOS machine for local development. If you are running Windows, you first need to set up the *Windows Subsystem for Linux (WSL)* environment.
 
 You need `docker cli` on your machine for testing purposes, and/or on the machines that run your pipeline.
-You can these by running the following command:
+You can verify this by running the following command:
 ```sh
 docker --version
 ```
