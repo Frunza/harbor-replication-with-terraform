@@ -35,8 +35,6 @@ WORKDIR /infrastructure
 
 Let's inject the environment variables and terraform commands in a `docker compose` file:
  ```sh
-version: '3.9'
-
 services:
   mainservice:
     image: harborreplication
