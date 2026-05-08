@@ -36,7 +36,7 @@ WORKDIR /infrastructure
 Let's inject the environment variables and terraform commands in a `docker compose` file:
  ```sh
 services:
-  mainservice:
+  main:
     image: harborreplication
     network_mode: host
     working_dir: /infrastructure
@@ -115,5 +115,5 @@ You can create a script to run the code inside a container:
 set -e
 
 docker build -f docker/dockerfile -t harborreplication .
-docker compose -f docker/docker-compose.yml run --rm mainservice
+docker compose -f docker/docker-compose.yml run --rm main
 ```
